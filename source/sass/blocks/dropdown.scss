@@ -1,0 +1,94 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown__button {
+  @include font(600, 16px, 24px);
+  position: relative;
+  width: 173px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 19px 4px 6px;
+  color: $color-primary;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-family: inherit;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("/img/menu/drop-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 10px;
+    height: 10px;
+    right: 10px;
+    top: 19px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+
+  &:focus {
+    background-color: $color-secondary;
+    outline: none;
+  }
+}
+
+.dropdown__button--active::after {
+  transform: rotate(180deg);
+  right: 10px;
+  top: 10px;
+}
+
+.dropdown__list {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: $color-white;
+  overflow: hidden;
+  border-radius: 4px;
+  width: 190px;
+  z-index: 1;
+}
+
+.dropdown__list--visible {
+  display: block;
+}
+
+.dropdown__item {
+  @include font(400, 16px, 24px);
+  color: $color-black;
+  margin: 0;
+  border-bottom: 1px solid $color-secondary;
+  padding: 8px 18px;
+  text-transform: lowercase;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &--active {
+    background-color: $color-primary;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary;
+  }
+}
+
+.dropdown.dropdown--nojs {
+  display: none;
+}

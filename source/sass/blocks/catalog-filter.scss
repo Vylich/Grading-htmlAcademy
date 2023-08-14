@@ -1,0 +1,352 @@
+.catalog-filter {
+  padding: 0 17px 32px 23px;
+}
+.catalog-filter__fieldset {
+  border: none;
+  padding: 0 0 30px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  &--milk {
+    padding-bottom: 13px;
+  }
+
+  &--country {
+    margin-bottom: 0;
+    padding-bottom: 9px;
+  }
+}
+
+.catalog-filter__title {
+  @include font(600, 16px, 24px);
+  margin-bottom: 21px;
+  padding: 0;
+
+  &--price {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog-filter__label-text {
+  @include font(400, 16px, 24px);
+  color: $color-black;
+}
+
+.catalog-filter__label {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 15px 0 34px;
+
+  &--country {
+    padding-left: 52px;
+    margin-bottom: 20px;
+  }
+}
+
+.catalog-filter__control-mark {
+  &--radio {
+    width: 24px;
+    height: 24px;
+    background-color: $color-white;
+    border: 2px solid $color-grey;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+
+  &--switch {
+    width: 42px;
+    height: 24px;
+    background-color: $color-grey;
+    border-radius: 12px;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $color-white;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: 0.3s;
+    }
+  }
+}
+
+.catalog-filter__control[type="radio"]:checked + .catalog-filter__control-mark {
+  border-color: $color-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.catalog-filter__control[type="radio"]:checked:not(:disabled) + .catalog-filter__control-mark:hover {
+  &::before {
+    background-color: $color-switch-hover-bg;
+  }
+}
+
+.catalog-filter__control[type="radio"]:checked:focus-visible + .catalog-filter__control-mark {
+  &::before {
+    background-color: $color-switch-hover-bg;
+  }
+}
+
+.catalog-filter__control:checked:disabled + .catalog-filter__control-mark {
+  border-color: $color-grey-light;
+  outline: none;
+
+  &::before {
+    background-color: $color-grey-light;
+  }
+}
+
+.catalog-filter__control:disabled + .catalog-filter__control-mark--radio {
+  border-color: $color-grey-light;
+}
+
+.catalog-filter__control[type="checkbox"]:checked + .catalog-filter__control-mark {
+  background-color: $color-primary;
+
+  &::before {
+    left: 20px;
+  }
+}
+
+.catalog-filter__control[type="checkbox"]:checked:not(:disabled) + .catalog-filter__control-mark:hover {
+  background-color: $color-switch-hover-bg;
+  outline: 2px solid $color-primary-lighter;
+  outline-offset: -2px;
+  transition: none;
+}
+
+.catalog-filter__control[type="checkbox"]:checked:disabled + .catalog-filter__control-mark {
+  background-color: $color-grey-light;
+
+  &::before {
+    background-color: $color-grey;
+  }
+}
+
+.catalog-filter__control:not(:disabled) + .catalog-filter__control-mark {
+  &--switch:hover {
+    background-color: $color-switch-hover-bg;
+    outline: 2px solid $color-primary-lighter;
+    outline-offset: -2px;
+    transition: none;
+  }
+
+  &--radio:hover {
+    outline: 8px solid $color-primary-opacity;
+    outline-offset: -13px;
+  }
+}
+
+.catalog-filter__control[type="checkbox"]:checked:focus-visible + .catalog-filter__control-mark {
+  &--switch {
+    background-color: $color-switch-hover-bg;
+    outline: 2px solid $color-primary-lighter;
+    outline-offset: -2px;
+    transition: none;
+  }
+}
+
+.catalog-filter__control:focus + .catalog-filter__control-mark {
+  &--switch {
+    background-color: $color-switch-hover-bg;
+    outline: 2px solid $color-primary-lighter;
+    outline-offset: -2px;
+    transition: none;
+  }
+}
+
+.catalog-filter__control:disabled + .catalog-filter__control-mark--switch {
+  background-color: $color-grey-light;
+}
+
+.catalog-filter__control:disabled ~ .catalog-filter__label-text {
+  color: $color-grey;
+}
+
+.catalog-filter__buttons-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+.catalog-filter__button {
+  @include font(400, 14px, 24px);
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  padding: 0;
+
+  &--apply {
+    color: $color-white;
+    background-color: $color-primary;
+    margin-bottom: 19px;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $color-primary-lighter;
+    }
+
+    &:focus {
+      background-color: $color-primary-lighter;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $color-primary-darker;
+    }
+
+    &:disabled {
+      background-color: $color-grey;
+    }
+  }
+
+  &--reset {
+    color: $color-primary;
+    background-color: $color-white;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $color-primary-lighter;
+      color: $color-white;
+    }
+
+    &:focus {
+      background-color: $color-primary-lighter;
+      color: $color-white;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $color-primary-darker;
+      color: $color-white;
+    }
+
+    &:disabled {
+      background-color: $color-grey-light;
+      color: $color-white;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-filter {
+    display: grid;
+    grid-template-columns: 228px 230px 203px;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    padding-bottom: 30px;
+    padding: 0 20px 29px;
+  }
+
+  .catalog-filter__buttons-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1/-1;
+    width: auto;
+    justify-content: center;
+    margin-left: 27px;
+  }
+
+  .catalog-filter__button {
+    margin-bottom: 10px;
+    min-height: 40px;
+
+    &--apply {
+      margin-right: 20px;
+      width: 137px;
+      font-size: 16px;
+    }
+
+    &--reset {
+      width: 120px;
+    }
+  }
+
+  .catalog-filter__title {
+    margin-bottom: 20px;
+
+    &--price {
+      margin-bottom: 31px;
+    }
+  }
+
+  .catalog-filter__fieldset {
+    &--country {
+      margin-bottom: 20px;
+    }
+
+    &--milk {
+      padding: 0 0 0 5px;
+    }
+
+    &--country {
+      padding: 0 0 0 6px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-filter {
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    padding: 5px 0 0;
+  }
+
+  .catalog-filter__button {
+    width: 150px;
+
+    &--apply {
+      margin-right: 5px;
+    }
+  }
+
+  .catalog-filter__title {
+    margin-bottom: 21px;
+  }
+
+  .catalog-filter__title--price {
+    margin-bottom: 31px;
+  }
+
+  .catalog-filter__fieldset {
+    &--price {
+      margin: 0;
+    }
+
+    &--milk {
+      padding: 0 0 10px 0;
+    }
+
+    &--country {
+      padding:0 0 19px 0;
+      margin: 0;
+    }
+  }
+
+  .catalog-filter__buttons-wrap {
+    margin: 0;
+    justify-content: space-between;
+  }
+}

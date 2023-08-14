@@ -1,0 +1,134 @@
+.swiper-button-disabled {
+  color: $color-grey;
+}
+
+.swiper-wrapper.swiper-wrapper--nojs {
+  flex-direction: column;
+}
+
+.swiper-wrapper--nojs ~ .swiper-button-prev,
+.swiper-wrapper--nojs ~ .swiper-button-next {
+  display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (min-width: $desktop-width) {
+  .swiper-pagination-bullet {
+    width: 62px;
+    height: 4px;
+    background-color: $color-white;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $color-primary-opacity;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-primary;
+  }
+}
+
+.slider-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  column-gap: 20px;
+  background: inherit;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(100px);
+
+  .slider-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 20px;
+  }
+
+  #skip-value-lower,
+  #skip-value-upper {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .noUi-target {
+    flex: 1;
+    position: relative;
+    background: #e3e3e3;
+    border-radius: 50px;
+
+    &.noUi-horizontal {
+      height: 10px;
+    }
+
+    .noUi-base,
+    .noUi-connects {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .noUi-connects {
+      border-radius: 3px;
+      overflow: hidden;
+      z-index: 0;
+
+      .noUi-connect {
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transform-origin: 0 0;
+        transform-style: flat;
+        background-color: #3ea8ff;
+      }
+    }
+
+    .noUi-origin {
+      will-change: transform;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      height: 0;
+      width: 100%;
+
+      .noUi-handle {
+        border-radius: 50px;
+        background: #fff;
+        cursor: default;
+        background-color: #3ea8ff;
+        backface-visibility: hidden;
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        right: -10px;
+        top: -6px;
+
+        .noUi-touch-area {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .noUi-draggable {
+    cursor: ew-resize;
+  }
+}

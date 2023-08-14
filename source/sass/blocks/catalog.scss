@@ -1,0 +1,147 @@
+.catalog {
+  padding: 48px 0 39px;
+  background-color: $color-grey-lightest;
+}
+
+.catalog__title-wrap {
+  text-align: center;
+}
+
+.catalog__subtitle {
+  @include font(700, 12px, 16px);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $color-primary;
+}
+
+.catalog__title {
+  @include font(700, 24px, 36px);
+  color: $color-black;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+
+.catalog__sorting-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  padding-top: 2px;
+}
+
+.catalog__sorting-select {
+  @include font(600, 16px, 24px);
+  font-family: inherit;
+  display: none;
+  width: 165px;
+  min-height: 32px;
+  border-radius: 4px;
+  color: $color-primary;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-transform: lowercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary;
+  }
+}
+
+.catalog__sorting-select.catalog__sorting-select--nojs {
+  display: block;
+}
+
+.catalog__sortinh-option {
+  @include font(400, 16px, 24px);
+  color: $color-black;
+}
+
+.catalog__sorting-container {
+  padding: 0 17px 0 23px;
+  margin-bottom: 15px;
+}
+
+.catalog__sorting-title {
+  @include font(600, 16px, 24px);
+  color: $color-black;
+}
+
+.catalog__sorting {
+  border: none;
+  background-color: transparent;
+}
+
+.catalog__list {
+  list-style-type: none;
+  margin-bottom: 39px;
+  padding-bottom: 0;
+  display: grid;
+  row-gap: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__title {
+    @include font(700, 42px, 64px);
+    margin-bottom: 20px;
+    margin-top: 4px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(2, 349px);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  .catalog__sorting-wrap {
+    margin-bottom: 25px;
+    margin-left: auto;
+    width: 280px;
+  }
+
+  .catalog {
+    padding: 77px 0 85px;
+  }
+
+  .catalog__sorting-container {
+    padding: 0 21px 0 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-wrap {
+    display: grid;
+    grid-template-columns: 318px 1011px;
+    grid-gap: 30px;
+    padding: 0 40px;
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .catalog__sorting-container {
+    width: 350px;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+
+  .catalog__list {
+    width: 1011px;
+    margin: 0;
+    padding: 0 0 61px;
+    grid-template-columns: repeat(3, 317px);
+  }
+
+  .catalog {
+    padding: 96px 0 116px;
+  }
+
+  .catalog__title {
+    margin-bottom: 35px;
+  }
+
+  .catalog__sorting-wrap {
+    padding: 1px 0 0 0;
+  }
+
+
+}
