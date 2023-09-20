@@ -46,30 +46,30 @@
 
   &--first {
     &::before {
-      background-image: url("/img/slider/first-slide-mobile.webp");
+      background-image: url("../img/slider/first-slide-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/slider/first-slide-mobile@2x.webp");
+        background-image: url("../img/slider/first-slide-mobile@2x.webp");
       }
     }
   }
 
   &--second {
     &::before {
-      background-image: url("/img/slider/second-slide-mobile.webp");
+      background-image: url("../img/slider/second-slide-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/slider/second-slide-mobile@2x.webp");
+        background-image: url("../img/slider/second-slide-mobile@2x.webp");
       }
     }
   }
 
   &--third {
     &::before {
-      background-image: url("/img/slider/third-slide-mobile.webp");
+      background-image: url("../img/slider/third-slide-mobile.webp");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("/img/slider/third-slide-mobile@2x.webp");
+        background-image: url("../img/slider/third-slide-mobile@2x.webp");
       }
     }
   }
@@ -232,30 +232,30 @@
 
     &--first {
       &::before {
-        background-image: url("/img/slider/first-slide-tablet.webp");
+        background-image: url("../img/slider/first-slide-tablet.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/first-slide-tablet@2x.webp");
+          background-image: url("../img/slider/first-slide-tablet@2x.webp");
         }
       }
     }
 
     &--second {
       &::before {
-        background-image: url("/img/slider/second-slide-tablet.webp");
+        background-image: url("../img/slider/second-slide-tablet.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/second-slide-tablet@2x.webp");
+          background-image: url("../img/slider/second-slide-tablet@2x.webp");
         }
       }
     }
 
     &--third {
       &::before {
-        background-image: url("/img/slider/third-slide-tablet.webp");
+        background-image: url("../img/slider/third-slide-tablet.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/third-slide-tablet@2x.webp");
+          background-image: url("../img/slider/third-slide-tablet@2x.webp");
         }
       }
     }
@@ -319,30 +319,30 @@
 
     &--first {
       &::before {
-        background-image: url("/img/slider/first-slide-desktop.webp");
+        background-image: url("../img/slider/first-slide-desktop.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/first-slide-desktop@2x.webp");
+          background-image: url("../img/slider/first-slide-desktop@2x.webp");
         }
       }
     }
 
     &--second {
       &::before {
-        background-image: url("/img/slider/second-slide-desktop.webp");
+        background-image: url("../img/slider/second-slide-desktop.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/second-slide-desktop@2x.webp");
+          background-image: url("../img/slider/second-slide-desktop@2x.webp");
         }
       }
     }
 
     &--third {
       &::before {
-        background-image: url("/img/slider/third-slide-desktop.webp");
+        background-image: url("../img/slider/third-slide-desktop.webp");
 
         @media (min-resolution: 2dppx) {
-          background-image: url("/img/slider/third-slide-desktop@2x.webp");
+          background-image: url("../img/slider/third-slide-desktop@2x.webp");
         }
       }
     }
